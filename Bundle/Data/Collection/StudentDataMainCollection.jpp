@@ -1,0 +1,9 @@
+#import (Config.path +"/Kernel/Collection/MasterCollection") = SimpleCollection;
+
+class StudentDataMainCollection extends MasterCollection {
+
+	_entityType = 'Student';
+
+}
+
+#export StudentDataMainCollection;
