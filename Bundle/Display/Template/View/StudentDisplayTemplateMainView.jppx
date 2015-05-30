@@ -1,0 +1,26 @@
+#import (Config.path +'/Kernel/Template/View/MasterView') = MasterView;
+
+class StudentDisplayTemplateMainView extends MasterView {
+
+	init : false;
+
+	initialState : function () {
+		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
+		return ({
+			students : store.getAll('Student')
+		});
+	}
+
+	render : function () {
+		var self = this;
+
+		return (<div className="student" key={this.props.key}>
+			{Object.keys(this.state.students).map(function (i) {
+				return (<div key={i}>{self.state.students[i].firstname} {self.state.students[i].lastname}</div>);
+			})}
+		</div>);
+	}
+
+}
+
+#export StudentDisplayTemplateMainView;

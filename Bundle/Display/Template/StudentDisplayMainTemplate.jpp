@@ -1,0 +1,22 @@
+#import (Config.path +'/Kernel/Template/MasterTemplate') = MasterTemplate;
+
+class StudentDisplayMainTemplate extends MasterTemplate {
+
+	_viewClassName = 'StudentDisplayTemplateMainView';
+
+	onListen : function () {
+		var dispatcher = _super();
+
+		dispatcher.listen('Store:Student:create', this, this.update.bind(this));
+		dispatcher.listen('Store:Student:update', this, this.update.bind(this));
+		dispatcher.listen('Store:Student:delete', this, this.update.bind(this));
+	}
+
+	update : function () {
+		if (this._view.isMounted())
+			this._view.replaceState({ students : this._view.state.students });
+	}
+
+}
+
+#export StudentDisplayMainTemplate;
