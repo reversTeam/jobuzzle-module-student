@@ -1,0 +1,2 @@
+invokables :
+	student_display_main_template : Display/Template/StudentDisplayMainTemplate
