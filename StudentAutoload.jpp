@@ -4,6 +4,31 @@ class StudentAutoload extends MasterAutoload {
 
 	confModuleName = 'Student';
 
+	onBootstrap : function () {
+		var routeManager = serviceLocator.get('RouteManager');
+		var router = serviceLocator.get('Router');
+		var studentRoute = routeManager.get('student_data_main_route');
+
+		router.addRoute('student', studentRoute);
+		// console.log(studentRoute);
+		// console.log(router.match('/students/theotime-riviere'));
+		// console.log(router);
+
+		console.log('BAD : ', router.build('/student/view/deletes', {
+			student_url : 'theotime-riviere'
+		}));
+
+		console.log('GOOD : ', router.build('/student/view/update', {
+			student_url : 'theotime-riviere'
+		}));
+	}
+
+	init : function () {
+		var serviceManager = serviceLocator.get('ServiceManager');
+		var studentService = serviceManager.get('student_display_main_service');
+
+	}
+
 }
 
 #export StudentAutoload;

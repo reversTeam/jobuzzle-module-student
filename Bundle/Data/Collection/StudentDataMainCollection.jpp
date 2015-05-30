@@ -4,6 +4,16 @@ class StudentDataMainCollection extends MasterCollection {
 
 	_entityType = 'Student';
 
+	getProtected : function () {
+		if (this._protected == undefined) {
+			var protected = _super();
+			this._protected = protected.concat(
+				Config.modules.Student.collections.upload.protected
+			);
+		}
+		return this._protected;
+	}
+
 }
 
 #export StudentDataMainCollection;

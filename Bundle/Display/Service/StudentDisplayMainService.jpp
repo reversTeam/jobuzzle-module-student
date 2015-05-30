@@ -1,0 +1,14 @@
+#import (Config.path +'/Kernel/Service/MasterService') = MasterService;
+
+class StudentDisplayMainService extends MasterService {
+
+	initialize : function () {
+		var dispatcher = serviceLocator.get('Dispatcher');
+
+		_super();
+		dispatcher.trigger('Body:Content:change', { content : 'student_display_main_template' });
+	}
+
+}
+
+#export StudentDisplayMainService;

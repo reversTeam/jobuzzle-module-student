@@ -1,0 +1,2 @@
+invokables:
+	student_data_main_route : Data/Route/StudentDataMainRoute
