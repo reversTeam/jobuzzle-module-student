@@ -1,0 +1,14 @@
+#import (Config.path +'/Kernel/Route/MasterRoute') = MasterRoute;
+
+class StudentDataMainRoute extends MasterRoute {
+
+	baseName = 'Student';
+	baseRoute = '{students}';
+	baseController = 'student_data_main_controller';
+
+	paramName : 'student_url';
+	paramRegex : '[a-z0-9-]+';
+
+}
+
+#export StudentDataMainRoute;
