@@ -1,6 +1,6 @@
-#import (Config.path +"/Kernel/Collection/MasterCollection") = SimpleCollection;
+#import (Config.path +'/Modules/BaseUser/Bundle/BaseUser/Collection/BaseUserDataMainCollection') = BaseUserDataMainCollection;
 
-class StudentDataMainCollection extends MasterCollection {
+class StudentDataMainCollection extends BaseUserDataMainCollection {
 
 	_entityType = 'Student';
 	_entityClass = 'student_data_main_entity';
@@ -9,7 +9,7 @@ class StudentDataMainCollection extends MasterCollection {
 		if (this._protected == undefined) {
 			var protected = _super();
 			this._protected = protected.concat(
-				Config.modules.Student.collections.upload.protected
+				Config.modules.Student.collections.update.protected
 			);
 		}
 		return this._protected;

@@ -1,42 +1,8 @@
-#import (Config.path +'/Kernel/Entity/MasterEntity') = MasterEntity;
+#import (Config.path +'/Modules/BaseUser/Bundle/BaseUser/Entity/BaseUserDataMainEntity') = BaseUserDataMainEntity;
 
-class StudentDataMainEntity extends MasterEntity {
+class StudentDataMainEntity extends BaseUserDataMainEntity {
 
 	_type = 'Student';
-
-	#default get for _type;
-
-	#default get, set for _url;
-	#default get, set for _firstname;
-	#default get, set for _lastname;
-	#default get, set for _username;
-	#default get, set for _lang;
-
-	initialize : function () {
-		_super();
-
-		this._url = undefined;
-		this._firstname = undefined;
-		this._lastname = undefined;
-		this._username = undefined;
-		this._lang = undefined;
-	}
-
-	public hydrate : function (datas) {
-		_super(datas);
-
-		if (datas.url)
-			this.setUrl(datas.url);
-		if (datas.firstname)
-			this.setFirstname(datas.firstname);
-		if (datas.lastname)
-			this.setLastname(datas.lastname);
-		if (datas.username)
-			this.setUsername(datas.username);
-		if (datas.lang)
-			this.setLang(datas.lang);
-		return this;
-	}
 
 }
 
