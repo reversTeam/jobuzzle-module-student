@@ -1,12 +1,11 @@
-#import (Config.path +'/Kernel/Entity/MasterEntity') = MasterEntity;
+#import (Config.path +'/Modules/Data/Bundle/Data/Entity/DataDataMainEntity') = DataDataMainEntity;
 
-class StudentDataMainEntity extends MasterEntity {
+class StudentDataMainEntity extends DataDataMainEntity {
 
 	_type = 'Student';
 
 	#default get for _type;
 
-	#default get, set for _url;
 	#default get, set for _firstname;
 	#default get, set for _lastname;
 	#default get, set for _username;
@@ -15,7 +14,6 @@ class StudentDataMainEntity extends MasterEntity {
 	initialize : function () {
 		_super();
 
-		this._url = undefined;
 		this._firstname = undefined;
 		this._lastname = undefined;
 		this._username = undefined;
@@ -25,8 +23,6 @@ class StudentDataMainEntity extends MasterEntity {
 	public hydrate : function (datas) {
 		_super(datas);
 
-		if (datas.url)
-			this.setUrl(datas.url);
 		if (datas.firstname)
 			this.setFirstname(datas.firstname);
 		if (datas.lastname)

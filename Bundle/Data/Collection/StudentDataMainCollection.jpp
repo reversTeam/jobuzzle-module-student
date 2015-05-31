@@ -1,6 +1,6 @@
-#import (Config.path +"/Kernel/Collection/MasterCollection") = SimpleCollection;
+#import (Config.path +'/Modules/Data/Bundle/Data/Collection/DataDataMainCollection') = DataDataMainCollection;
 
-class StudentDataMainCollection extends MasterCollection {
+class StudentDataMainCollection extends DataDataMainCollection {
 
 	_entityType = 'Student';
 	_entityClass = 'student_data_main_entity';
