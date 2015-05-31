@@ -3,6 +3,7 @@
 class StudentDataMainCollection extends MasterCollection {
 
 	_entityType = 'Student';
+	_entityClass = 'student_data_main_entity';
 
 	getProtected : function () {
 		if (this._protected == undefined) {
