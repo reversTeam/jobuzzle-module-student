@@ -7,7 +7,7 @@ class StudentDisplayTemplateMainView extends MasterView {
 	initialState : function () {
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		return ({
-			students : store.getAll('Student')
+			students : store.getAll()
 		});
 	}
 
@@ -17,7 +17,7 @@ class StudentDisplayTemplateMainView extends MasterView {
 		return (<div className="student" key={this.props.key}>
 			{Object.keys(this.state.students).map(function (i) {
 				return (<div key={i}>
-					{self.state.students[i].getFirstname() +' '+ self.state.students[i].getLastname()}
+					{self.state.students[i].displayTimeline()}
 				</div>);
 			})}
 		</div>);
