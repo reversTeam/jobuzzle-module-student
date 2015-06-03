@@ -1,13 +1,15 @@
-#import (Config.path +'/Kernel/Route/MasterRoute') = MasterRoute;
+#import (Config.path +'/Modules/BaseUser/Bundle/Data/Route/BaseUserDataMainRoute') = BaseUserDataMainRoute;
 
-class StudentDataMainRoute extends MasterRoute {
+class StudentDataMainRoute extends BaseUserDataMainRoute {
+
+	name = 'student';
 
 	baseName = 'Student';
 	baseRoute = '{students}';
 	baseController = 'student_data_main_controller';
 
-	paramName : 'student_url';
-	paramRegex : '[a-z0-9-]+';
+	paramName = 'student_url';
+	paramRegex = '[a-z0-9-]+';
 
 }
 
