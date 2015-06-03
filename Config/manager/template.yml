@@ -1,2 +1,3 @@
 invokables :
 	student_display_main_template : Display/Template/StudentDisplayMainTemplate
+	student_data_timeline_template : Data/Template/StudentDataTimelineTemplate

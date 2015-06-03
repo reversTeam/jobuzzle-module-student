@@ -7,9 +7,9 @@ class StudentDisplayMainTemplate extends MasterTemplate {
 	onListen : function () {
 		var dispatcher = _super();
 
-		dispatcher.listen('Store:Student:create', this, this.update.bind(this));
-		dispatcher.listen('Store:Student:update', this, this.update.bind(this));
-		dispatcher.listen('Store:Student:delete', this, this.update.bind(this));
+		dispatcher.listen('Store:Element:create', this, this.update.bind(this));
+		dispatcher.listen('Store:Element:update', this, this.update.bind(this));
+		dispatcher.listen('Store:Element:delete', this, this.update.bind(this));
 	}
 
 	update : function () {
