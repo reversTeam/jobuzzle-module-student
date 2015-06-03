@@ -1,0 +1,8 @@
+#import (Config.path +'/Modules/BaseUser/Bundle/Template/View/BaseUserDataTemplateTimelineView') = BaseUserDataTemplateTimelineView;
+
+class StudentUserDataTemplateTimelineView extends BaseUserDataTemplateTimelineView {
+
+
+}
+
+#export StudentUserDataTemplateTimelineView;
