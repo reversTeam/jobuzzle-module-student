@@ -1,20 +1,37 @@
-#import (Config.path +'/Kernel/Template/MasterTemplate') = MasterTemplate;
+#import (Config.path +'/Kernel/Template/ContentTemplate') = ContentTemplate;
 
-class StudentDisplayMainTemplate extends MasterTemplate {
+class StudentDisplayMainTemplate extends ContentTemplate {
 
 	_viewClassName = 'StudentDisplayTemplateMainView';
+
+	limit = 100;
+	offset = 0;
 
 	onListen : function () {
 		var dispatcher = _super();
 
-		dispatcher.listen('Store:Element:create', this, this.update.bind(this));
-		dispatcher.listen('Store:Element:update', this, this.update.bind(this));
-		dispatcher.listen('Store:Element:delete', this, this.update.bind(this));
+		dispatcher.listen('Store:Student:create', this, this.update.bind(this));
+		dispatcher.listen('Store:Student:update', this, this.update.bind(this));
+		dispatcher.listen('Store:Student:delete', this, this.update.bind(this));
 	}
 
 	update : function () {
-		if (this._view.isMounted())
-			this._view.replaceState({ students : this._view.state.students });
+		this._view.update();
+	}
+
+	getNext : function () {
+		var self = this;
+		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
+		var router = serviceLocator.get('Router');
+
+		console.log('GET [ '+ this.offset +' -> '+ (this.limit + this.offset) +']');
+		store.request(router.build('/student'), {
+			limit : this.limit,
+			offset : this.offset
+		}, function () {
+			self._view.setState({ loader : false });
+		});
+		this.offset += this.limit;
 	}
 
 }
