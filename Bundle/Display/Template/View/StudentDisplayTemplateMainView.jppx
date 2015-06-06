@@ -1,25 +1,52 @@
-#import (Config.path +'/Kernel/Template/View/MasterView') = MasterView;
+#import (Config.path +'/Kernel/Template/View/ContentView') = ContentView;
 
-class StudentDisplayTemplateMainView extends MasterView {
+class StudentDisplayTemplateMainView extends ContentView {
 
-	init : false;
+	initialize : function () {
+		_super();
+		console.log('INIT DISPLAY VIEW');
+		this._template.getNext();
+	}
 
 	initialState : function () {
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		return ({
-			students : store.getAll()
+			loader : true,
+			students : store.getAll('Student')._entity
 		});
 	}
 
-	render : function () {
-		var self = this;
+	update : function () {
+		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 
-		return (<div className="student" key={this.props.key}>
+		this.setState({ students : store.getAll('Student')._entity });
+	}
+
+	test : function () {
+		alert('test');
+	}
+
+	render : function () {
+		if (!this._template.getVisibility())
+			return null;
+		var self = this;
+		var loader = null;
+
+		if (this.state.loader) {
+			loader = this.getTemplate('navigation_loader_main_template');
+		}
+
+		return (<div className="students" key={this.props.key}>
 			{Object.keys(this.state.students).map(function (i) {
-				return (<div key={i}>
+				if (self.state.students[i].isMe())
+					return null;
+				return (<div className="student" key={i}>
 					{self.state.students[i].displayTimeline()}
 				</div>);
 			})}
+			<div className="loader_students">
+				{loader}
+			</div>
 		</div>);
 	}
 

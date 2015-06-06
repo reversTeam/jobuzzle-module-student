@@ -1,0 +1,16 @@
+div.students {
+	width: 100%;
+	position: relative;
+
+	div.loader_students {
+		width: 50px;
+		height: 20px;
+		position : absolute;
+		bottom : -10px;
+		left : 50%;
+		margin-left : -25px;
+	}
+	div.student {
+		display : inline-block;
+	}
+}
