@@ -1,0 +1,7 @@
+class StudentDataUpdateTemplate extends BaseUserDataUpdateTemplate {
+
+	_viewClassName = 'StudentDataTemplateUpdateView';
+	_type = 'Student';
+	_route = 'student';
+
+}

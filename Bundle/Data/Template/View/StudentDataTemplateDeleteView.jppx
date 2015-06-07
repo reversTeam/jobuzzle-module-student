@@ -1,0 +1,10 @@
+class StudentDataTemplateDeleteView extends BaseUserDataTemplateDeleteView {
+
+	_class = 'student';
+	_elementType = 'Student';
+
+	display : function () {
+		return <div>Delete Student</div>;
+	}
+
+}

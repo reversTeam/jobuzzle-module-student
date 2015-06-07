@@ -1,0 +1,6 @@
+class StudentDataMainService extends BaseUserDataMainService {
+
+	_type = 'student';
+	_title = 'Students';
+
+}

@@ -1,6 +1,9 @@
-#import (Config.path +'/Kernel/Service/MasterService') = MasterService;
+#import (Config.path +'/Modules/Element/Data/Service/ElementDataMainService') = ElementDataMainService;
 
-class StudentDisplayMainService extends MasterService {
+class StudentDisplayMainService extends ElementDataMainService {
+
+	_type = 'student';
+	_title = 'Students';
 
 	initialize : function () {
 		var dispatcher = serviceLocator.get('Dispatcher');

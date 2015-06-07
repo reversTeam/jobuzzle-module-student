@@ -1,0 +1,28 @@
+class StudentDataTemplateSearchView extends BaseUserDataTemplateSearchView {
+
+	_class = 'student';
+	_elementType = 'Student';
+
+	display : function () {
+		var self = this;
+		var loader = null;
+
+		if (this.state.loader) {
+			loader = this.getTemplate('navigation_loader_main_template');
+		}
+
+		return (<div className="students" key={this.props.key}>
+			{Object.keys(this.state.students).map(function (i) {
+				if (self.state.students[i].isMe())
+					return null;
+				return (<div className="student" key={i}>
+					{self.state.students[i].displayTimeline()}
+				</div>);
+			})}
+			<div className="loader_students">
+				{loader}
+			</div>
+		</div>);
+	}
+
+}

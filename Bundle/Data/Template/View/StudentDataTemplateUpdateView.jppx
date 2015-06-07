@@ -1,0 +1,10 @@
+class StudentDataTemplateUpdateView extends BaseUserDataTemplateUpdateView {
+
+	_class = 'student';
+	_elementType = 'Student';
+
+	display : function () {
+		return <div>Update Student</div>;
+	}
+
+}

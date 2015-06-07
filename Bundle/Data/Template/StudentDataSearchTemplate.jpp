@@ -1,0 +1,7 @@
+class StudentDataSearchTemplate extends BaseUserDataSearchTemplate {
+
+	_viewClassName = 'StudentDataTemplateSearchView';
+	_type = 'Student';
+	_route = 'student';
+
+}

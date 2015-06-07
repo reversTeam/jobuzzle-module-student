@@ -1,0 +1,7 @@
+class StudentDataDeleteTemplate extends BaseUserDataDeleteTemplate {
+
+	_viewClassName = 'StudentDataTemplateDeleteView';
+	_type = 'Student';
+	_route = 'student';
+
+}
