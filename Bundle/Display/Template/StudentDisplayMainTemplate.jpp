@@ -4,7 +4,9 @@ class StudentDisplayMainTemplate extends ContentTemplate {
 
 	_viewClassName = 'StudentDisplayTemplateMainView';
 
-	limit = 100;
+	wait = false;
+	end = false;
+	limit = 50;
 	offset = 0;
 
 	onListen : function () {
@@ -13,25 +15,35 @@ class StudentDisplayMainTemplate extends ContentTemplate {
 		dispatcher.listen('Store:Student:create', this, this.update.bind(this));
 		dispatcher.listen('Store:Student:update', this, this.update.bind(this));
 		dispatcher.listen('Store:Student:delete', this, this.update.bind(this));
+		dispatcher.listen('Navigation:Scroll:Bottom98', this, this.getNext.bind(this));
+		dispatcher.listen('Navigation:Scroll:Bottom100', this, this.getNext.bind(this));
 	}
 
 	update : function () {
+		if (this.getVisibility())
 		this._view.update();
 	}
 
 	getNext : function () {
+		if (this.wait || this.end || this.getVisibility())
+			return ;
 		var self = this;
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		var router = serviceLocator.get('Router');
 
-		console.log('GET [ '+ this.offset +' -> '+ (this.limit + this.offset) +']');
+		if (this._view.setState)
+			this._view.setState({ loader : true });
+		this.wait = true;
 		store.request(router.build('/student'), {
 			limit : this.limit,
-			offset : this.offset
-		}, function () {
+			offset : this.offset,
+			order : 'firstname'
+		}, function (data) {
+			self.end = !data.result.length;
+			self.wait = false;
 			self._view.setState({ loader : false });
+			self.offset += self.limit;
 		});
-		this.offset += this.limit;
 	}
 
 }

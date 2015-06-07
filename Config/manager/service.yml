@@ -1,2 +1,3 @@
 invokables :
 	student_display_main_service : Display/Service/StudentDisplayMainService
+	student_data_main_service : Data/Service/StudentDataMainService

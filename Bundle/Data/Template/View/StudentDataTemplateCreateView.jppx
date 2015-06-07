@@ -1,0 +1,10 @@
+class StudentDataTemplateCreateView extends BaseUserDataTemplateCreateView {
+
+	_class = 'student';
+	_elementType = 'Student';
+
+	display : function () {
+		return <div>Create Student</div>;
+	}
+
+}

@@ -4,7 +4,6 @@ class StudentDisplayTemplateMainView extends ContentView {
 
 	initialize : function () {
 		_super();
-		console.log('INIT DISPLAY VIEW');
 		this._template.getNext();
 	}
 
@@ -20,10 +19,6 @@ class StudentDisplayTemplateMainView extends ContentView {
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 
 		this.setState({ students : store.getAll('Student')._entity });
-	}
-
-	test : function () {
-		alert('test');
 	}
 
 	render : function () {

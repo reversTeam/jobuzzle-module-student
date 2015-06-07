@@ -1,0 +1,10 @@
+#import (Config.path +'/Modules/Element/Data/Controller/ElementDataMainController') = ElementDataMainController;
+
+class StudentDisplayMainController extends ElementDataMainController {
+
+	_serviceName = 'student_display_main_service';
+	_title = 'Students';
+
+}
+
+#export StudentDisplayMainController;

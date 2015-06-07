@@ -1,5 +1,17 @@
 invokables :
 	student_display_main_template : Display/Template/StudentDisplayMainTemplate
 	student_data_timeline_template : Data/Template/StudentDataTimelineTemplate
+
+	student_data_search_template	: Data/Template/StudentDataSearchTemplate
+	student_data_view_template		: Data/Template/StudentDataViewTemplate
+	student_data_create_template	: Data/Template/StudentDataCreateTemplate
+	student_data_update_template	: Data/Template/StudentDataUpdateTemplate
+	student_data_delete_template	: Data/Template/StudentDataDeleteTemplate
 shared:
 	student_display_main_template : true
+
+	student_data_search_template	: true
+	student_data_view_template		: true
+	student_data_create_template	: true
+	student_data_update_template	: true
+	student_data_delete_template	: true

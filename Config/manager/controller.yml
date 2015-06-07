@@ -1,0 +1,3 @@
+invokables:
+	student_data_main_controller : Data/Controller/StudentDataMainController
+	student_display_main_controller : Data/Controller/StudentDisplayMainController
