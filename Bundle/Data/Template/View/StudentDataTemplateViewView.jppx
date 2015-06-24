@@ -4,7 +4,10 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 	_elementType = 'Student';
 
 	display : function () {
-		return <div>View Student</div>;
+		return <div>
+			<div data-url="/etudiants/33/filtres" onClick={this.link}>Filtres</div>
+			View Student
+		</div>;
 	}
 
 }
