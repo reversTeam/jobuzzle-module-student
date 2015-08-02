@@ -4,9 +4,11 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 	_elementType = 'Student';
 
 	display : function () {
+		var student = this.state.entity;
+		if (!student)
+			return (<div>Student not loaded</div>);
 		return <div>
-			<div data-url="/etudiants/33/filtres" onClick={this.link}>Filtres</div>
-			View Student
+			<img src={ 'http:'+ student.getPicture() }/> {student.getFirstname() +' '+ student.getLastname()}
 		</div>;
 	}
 
