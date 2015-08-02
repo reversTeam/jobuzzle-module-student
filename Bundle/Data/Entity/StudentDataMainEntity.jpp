@@ -1,10 +1,6 @@
-#import (Config.path +'/Modules/BaseUser/Bundle/BaseUser/Entity/BaseUserDataMainEntity') = BaseUserDataMainEntity;
-
 class StudentDataMainEntity extends BaseUserDataMainEntity {
 
 	_type = 'Student';
 	_templateTimeline = 'student_data_timeline_template';
 
 }
-
-#export StudentDataMainEntity;

@@ -1,6 +1,11 @@
 class StudentDataMainService extends BaseUserDataMainService {
 
 	_type = 'student';
+	_entityType = 'Student';
 	_title = 'Students';
+
+	getTitleParamsView : function (entity) {
+		return _super(entity);
+	}
 
 }

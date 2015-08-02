@@ -1,5 +1,7 @@
 class StudentDataMainController extends BaseUserDataMainController {
 
 	_serviceName = 'student_data_main_service';
+	_entityType = 'Student';
+	_url = 'student';
 
 }
