@@ -1,5 +1,3 @@
-#import (Config.path +'/Modules/BaseUser/Bundle/Data/Route/BaseUserDataMainRoute') = BaseUserDataMainRoute;
-
 class StudentDataMainRoute extends BaseUserDataMainRoute {
 
 	name = 'student';
@@ -12,5 +10,3 @@ class StudentDataMainRoute extends BaseUserDataMainRoute {
 	paramRegex = '[a-z0-9-]+';
 
 }
-
-#export StudentDataMainRoute;
