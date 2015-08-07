@@ -1,5 +1,3 @@
-#import (Config.path +'/Kernel/Autoload/MasterAutoload') = MasterAutoload;
-
 class StudentAutoload extends MasterAutoload {
 
 	confModuleName = 'Student';
@@ -11,5 +9,3 @@ class StudentAutoload extends MasterAutoload {
 	}
 
 }
-
-#export StudentAutoload;
