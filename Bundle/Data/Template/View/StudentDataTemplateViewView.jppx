@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-09 14:29:42
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -20,7 +20,7 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 		if (!student)
 			return (<div>Student not loaded</div>);
 		return <div>
-			<img src={ 'http:'+ student.getPicture() }/> {student.getFirstname() +' '+ student.getLastname()}
+			<img src={ student.getPicture() }/> {student.getFirstname() +' '+ student.getLastname()}
 		</div>;
 	}
 
