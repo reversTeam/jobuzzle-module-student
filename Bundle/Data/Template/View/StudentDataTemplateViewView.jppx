@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-09 14:29:42
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 14:20:51
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -15,8 +15,9 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 	_class = 'student';
 	_elementType = 'Student';
 
-	display : function () {
-		var student = this.state.entity;
+	public display : function () {
+		var student = this.state['entity'];
+		console.log(this.state, student);
 		if (!student)
 			return (<div>Student not loaded</div>);
 		return <div>

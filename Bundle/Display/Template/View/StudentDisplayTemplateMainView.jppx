@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 13:23:37
 **************************************************************/
 
 #import (Config.path +'/Kernel/Template/View/ContentView') = ContentView;
@@ -16,25 +16,25 @@ class StudentDisplayTemplateMainView extends ContentView {
 
 	initialize : function () {
 		_super();
-		this._template.getNext();
+		this['_template'].getNext();
 	}
 
-	initialState : function () {
+	public initialState : function () {
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		return ({
-			loader : true,
-			students : store.getAll('Student')._entity
+			'loader' : true,
+			'students' : store.getAll('Student')._entity
 		});
 	}
 
-	update : function () {
+	public update : function () {
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 
-		this.setState({ students : store.getAll('Student')._entity });
+		this.setState({ 'students' : store.getAll('Student')._entity });
 	}
 
-	render : function () {
-		if (!this._template.getVisibility())
+	public render : function () {
+		if (!this['_template'].getVisibility())
 			return null;
 		var self = this;
 		var loader = null;

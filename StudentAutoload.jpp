@@ -7,14 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:49:23
 **************************************************************/
 
 class StudentAutoload extends MasterAutoload {
 
 	confModuleName = 'Student';
 
-	init : function () {
+	public init : function () {
 		var serviceManager = serviceLocator.get('ServiceManager');
 		var studentService = serviceManager.get('student_display_main_service');
 

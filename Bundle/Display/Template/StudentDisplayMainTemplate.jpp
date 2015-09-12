@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 00:09:18
 **************************************************************/
 
 #import (Config.path +'/Kernel/Template/ContentTemplate') = ContentTemplate;
@@ -21,7 +21,7 @@ class StudentDisplayMainTemplate extends ContentTemplate {
 	limit = 50;
 	offset = 0;
 
-	onListen : function () {
+	public onListen : function () {
 		var dispatcher = _super();
 
 		dispatcher.listen('Store:Student:create', this, this.update.bind(this));
@@ -31,7 +31,7 @@ class StudentDisplayMainTemplate extends ContentTemplate {
 		dispatcher.listen('Navigation:Scroll:Bottom100', this, this.getNext.bind(this));
 	}
 
-	update : function () {
+	public update : function () {
 		if (this.getVisibility())
 		this._view.update();
 	}
@@ -43,17 +43,17 @@ class StudentDisplayMainTemplate extends ContentTemplate {
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 		var router = serviceLocator.get('Router');
 
-		if (this._view.setState)
-			this._view.setState({ loader : true });
+		if (this._view['setState'])
+			this._view['setState']({ loader : true });
 		this.wait = true;
 		store.request(router.build('/student'), {
-			limit : this.limit,
-			offset : this.offset,
-			order : 'firstname'
+			'limit' : this.limit,
+			'offset' : this.offset,
+			'order' : 'firstname'
 		}, function (data) {
 			self.end = !data.result.length;
 			self.wait = false;
-			self._view.setState({ loader : false });
+			self._view['setState']({ loader : false });
 			self.offset += self.limit;
 		});
 	}
