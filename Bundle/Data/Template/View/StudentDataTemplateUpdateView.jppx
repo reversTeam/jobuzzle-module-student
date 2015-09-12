@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:29:04
 **************************************************************/
 
 class StudentDataTemplateUpdateView extends BaseUserDataTemplateUpdateView {
@@ -15,7 +15,7 @@ class StudentDataTemplateUpdateView extends BaseUserDataTemplateUpdateView {
 	_class = 'student';
 	_elementType = 'Student';
 
-	display : function () {
+	public display : function () {
 		return <div>Update Student</div>;
 	}
 

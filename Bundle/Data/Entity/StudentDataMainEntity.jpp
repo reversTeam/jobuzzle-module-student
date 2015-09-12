@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 01:03:36
 **************************************************************/
 
 class StudentDataMainEntity extends BaseUserDataMainEntity {
 
-	_type = 'Student';
-	_templateTimeline = 'student_data_timeline_template';
+	public _type = 'Student';
+	public _templateTimeline = 'student_data_timeline_template';
 
 }
