@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:29:04
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-15 23:47:10
 **************************************************************/
 
 class StudentDataTemplateUpdateView extends BaseUserDataTemplateUpdateView {
@@ -16,7 +16,11 @@ class StudentDataTemplateUpdateView extends BaseUserDataTemplateUpdateView {
 	_elementType = 'Student';
 
 	public display : function () {
-		return <div>Update Student</div>;
+		var editForm = this.getService().getFieldset().getEditForm();
+
+		return <div className="student update">
+			{ this.getHelper('CreateForm', { form : editForm, entity : this.state.entity }) }
+		</div>;
 	}
 
 }

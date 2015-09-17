@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-11 21:29:00
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:43:39
 **************************************************************/
 
 class StudentDataTemplateCreateView extends BaseUserDataTemplateCreateView {
@@ -16,7 +16,8 @@ class StudentDataTemplateCreateView extends BaseUserDataTemplateCreateView {
 	_elementType = 'Student';
 
 	public display : function () {
-		return <div>Create Student</div>;
+		var createForm = this.getService().getFieldset().getCreateForm();
+		return <div>{ this.getHelper('CreateForm', { form : createForm, entity : this.state.entity }) }</div>;
 	}
 
 }
