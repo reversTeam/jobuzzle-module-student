@@ -7,6 +7,35 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-15 13:50:59
 **************************************************************/
 
+div.student.view {
+
+	div.picture {
+		display: inline-block;
+		width: 160px;
+		height: 190px;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	div.nameProfile {
+		display: inline-block;
+		vertical-align: top;
+		margin-left : 20px;
+		color: rgba($primary_color, 0.7);
+		font-size: 26px;
+		font-weight: bold;
+	}
+
+	i.fa.fa-pencil {
+		float : right;
+		color : rgba($primary_color, 0.4);
+		transition: 0.2s;
+
+		&:hover {
+			color : rgba($primary_color, 0.7);
+		}
+	}
+}

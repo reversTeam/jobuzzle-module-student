@@ -3,13 +3,16 @@
 #     ####         #                               #          #
 #       ##  #####  ######  #     # ####### ####### #  #####   # @Author: revers
 #       ## #     # #     # #     #      #       #  # #     #  #
-#       ## #     # #     # #     #     #       #   # #     #  # @Date:   2015-08-08 11:12:49
+#       ## #     # #     # #     #     #       #   # #     #  # @Date:   2015-09-16 00:22:51
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-15 23:29:52
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-16 00:23:05
 ###############################################################
 
-Students: 'Etudiants'
-view: '{{url}}'
-update: '{{url}}'
+
+invokables:
+	student_data_fieldset_form : Data/Form/StudentDataFieldsetForm
+	student_data_create_form : Data/Form/StudentDataCreateForm
+	student_data_edit_form : Data/Form/StudentDataEditForm
+	student_data_search_form : Data/Form/StudentDataSearchForm

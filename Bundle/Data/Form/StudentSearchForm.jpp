@@ -3,18 +3,16 @@
 *     ####         #                               #          *
 *       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
 *       ## #     # #     # #     #      #       #  # #     #  *
-*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-08-08 11:12:49
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-09-16 00:24:57
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:46:08
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 13:06:15
 **************************************************************/
 
-class StudentDataSearchTemplate extends BaseUserDataSearchTemplate {
+class StudentDataSearchForm extends BaseUserDataSearchForm {
 
-	_viewClassName = 'StudentDataTemplateSearchView';
-	_serviceName = 'student_data_main_service';
-	_type = 'Student';
-	_route = 'student';
+	public _title = 'Search student';
+	public _url = '/student';
 
 }

@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-12 14:20:51
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-15 19:23:26
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -15,13 +15,31 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 	_class = 'student';
 	_elementType = 'Student';
 
+	getUrl : function () {
+		var router = serviceLocator.get('Router');
+		var entity = this.state.entity;
+
+		return router.build('/student/view/update',{
+			student_url : entity.getUrl()
+		});
+	}
+
 	public display : function () {
 		var student = this.state['entity'];
-		console.log(this.state, student);
+		var picture = 'http://vignette1.wikia.nocookie.net/simpsons/images/1/1a/Bart-simpson-11.gif/revision/latest?cb=20111228173813&path-prefix=pt';
+		var style = {};
+
 		if (!student)
 			return (<div>Student not loaded</div>);
-		return <div>
-			<img src={ student.getPicture() }/> {student.getFirstname() +' '+ student.getLastname()}
+		else if (student.getPicture() != undefined)
+			picture = student.getPicture();
+		style['backgroundImage'] = 'url("'+ picture +'")'; 
+		return <div className="student view">
+			<div className="picture" style={style}></div>
+			<div className="nameProfile">
+				{student.getFirstname() +' '+ student.getLastname()}
+			</div>
+			<i className="fa fa-pencil" data-url={this.getUrl()} onClick={this.link}></i>
 		</div>;
 	}
 
