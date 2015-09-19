@@ -7,20 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-15 23:47:10
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-19 13:00:35
 **************************************************************/
 
 class StudentDataTemplateUpdateView extends BaseUserDataTemplateUpdateView {
 
 	_class = 'student';
 	_elementType = 'Student';
-
-	public display : function () {
-		var editForm = this.getService().getFieldset().getEditForm();
-
-		return <div className="student update">
-			{ this.getHelper('CreateForm', { form : editForm, entity : this.state.entity }) }
-		</div>;
-	}
 
 }
