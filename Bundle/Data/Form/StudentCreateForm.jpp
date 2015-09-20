@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 13:05:58
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:20:32
 **************************************************************/
 
 class StudentDataCreateForm extends BaseUserDataCreateForm {
 
-	public _title = 'Create student';
+	public _title = 'form.title.student.create';
 	public _url = '/student/create';
 
 }
