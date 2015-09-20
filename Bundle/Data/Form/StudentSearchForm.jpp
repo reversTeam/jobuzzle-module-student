@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 13:06:15
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:20:54
 **************************************************************/
 
 class StudentDataSearchForm extends BaseUserDataSearchForm {
 
-	public _title = 'Search student';
+	public _title = 'form.title.student.search';
 	public _url = '/student';
 
 }

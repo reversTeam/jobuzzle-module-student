@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-17 15:33:49
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-20 12:20:44
 **************************************************************/
 
 class StudentDataEditForm extends BaseUserDataEditForm {
 
-	public _title = 'Edit student';
+	public _title = 'form.title.student.edit';
 	public _url = '/student/view/update';
 	public _paramNameRoute = 'student_url';
 
