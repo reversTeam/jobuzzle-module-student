@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-15 19:23:26
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-25 01:46:52
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -17,10 +17,10 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 
 	getUrl : function () {
 		var router = serviceLocator.get('Router');
-		var entity = this.state.entity;
+		var entity = this.state['entity'];
 
 		return router.build('/student/view/update',{
-			student_url : entity.getUrl()
+			'student_url' : entity['getUrl']()
 		});
 	}
 
