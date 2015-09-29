@@ -7,14 +7,14 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-16 00:32:17
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-29 10:09:00
 **************************************************************/
 
 class StudentDataUpdateTemplate extends BaseUserDataUpdateTemplate {
 
-	_viewClassName = 'StudentDataTemplateUpdateView';
-	_serviceName = 'student_data_main_service';
-	_type = 'Student';
-	_route = 'student';
+	public _viewClassName = 'StudentDataTemplateUpdateView';
+	public _serviceName = 'student_data_main_service';
+	public _type = 'Student';
+	public _route = 'student';
 
 }
