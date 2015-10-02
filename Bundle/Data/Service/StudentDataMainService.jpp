@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-30 23:25:40
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-01 12:14:50
 **************************************************************/
 
 class StudentDataMainService extends BaseUserDataMainService {
@@ -22,7 +22,7 @@ class StudentDataMainService extends BaseUserDataMainService {
 		return _super(entity);
 	}
 
-	public getStudentEntity : function (id) {
+	public getElementEntity : function (id) {
 		var router = serviceLocator.get('Router');
 		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
 
