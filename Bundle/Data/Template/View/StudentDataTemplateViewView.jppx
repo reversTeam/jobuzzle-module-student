@@ -7,42 +7,34 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-09-30 22:08:03
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-03 22:46:14
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 
-	_class = 'student';
-	_elementType = 'Student';
-
-	getUrl : function () {
-		var router = serviceLocator.get('Router');
-		var entity = this.state['entity'];
-
-		if (!entity || entity['getUrl']() == undefined)
-			return null;
-
-		return router.build('/student/view/update',{
-			'student_url' : entity['getUrl']()
-		});
-	}
+	public _class = 'student';
+	public _elementType = 'Student';
 
 	public display : function () {
-		var student = this.state['entity'];
-		var picture = 'http://vignette1.wikia.nocookie.net/simpsons/images/1/1a/Bart-simpson-11.gif/revision/latest?cb=20111228173813&path-prefix=pt';
+		var router = serviceLocator.get('Router');
+		var entity = this.state['entity'];
+		var picture = '';
 		var style = {};
 
-		if (!student)
+		if (!entity)
 			return (<div>Student not loaded</div>);
-		else if (student.getPicture() != undefined)
-			picture = student.getPicture();
+		else if (entity.getPicture() != undefined)
+			picture = entity.getPicture();
 		style['backgroundImage'] = 'url("'+ picture +'")'; 
 		return <div className="student view">
 			<div className="picture" style={style}></div>
 			<div className="nameProfile">
-				{student.getFirstname() +' '+ student.getLastname()}
+				{entity.getFirstname() +' '+ entity.getLastname()}
 			</div>
-			<i className="fa fa-pencil" data-url={this.getUrl()} onClick={this.link}></i>
+			<div className="actions">
+				<i className="fa fa-suitcase" data-url={router.entityRoute(entity, 'filter')} onClick={this.link}></i>
+				<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
+			</div>
 		</div>;
 	}
 
