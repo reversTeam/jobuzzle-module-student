@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-06 16:08:45
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 14:17:00
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -27,14 +27,15 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 			picture = this.getUrlAsset(entity.getPicture());
 		style['backgroundImage'] = 'url("'+ picture +'")'; 
 		return <div className="student view">
-			<div className="picture" style={style}></div>
-			<div className="nameProfile">
-				{entity.getFirstname() +' '+ entity.getLastname()}
-			</div>
 			<div className="actions">
 				<i className="fa fa-suitcase" data-url={router.entityRoute(entity, 'filter')} onClick={this.link}></i>
 				<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
 			</div>
+			<div className="picture" style={style}></div>
+			<div className="nameProfile">
+				{entity.getFirstname() +' '+ entity.getLastname()}
+			</div>
+			{ this.getHelper('DisplayFilter', { entity : entity }) }
 		</div>;
 	}
 
