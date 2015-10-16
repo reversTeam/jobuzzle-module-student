@@ -7,9 +7,9 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-08-08 14:32:22
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-10-16 15:08:06
 ###############################################################
 
 invokables :
-	student_display_main_service : Display/Service/StudentDisplayMainService
 	student_data_main_service : Data/Service/StudentDataMainService
+	student_display_main_service : Display/Service/StudentDisplayMainService
