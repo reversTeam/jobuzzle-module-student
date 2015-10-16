@@ -7,12 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-04 01:03:17
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 15:56:49
 **************************************************************/
 
 class StudentDataTimelineTemplate extends BaseUserDataTimelineTemplate {
 
-	public _viewClassName = 'StudentUserDataTemplateTimelineView';
+	public _viewClassName = 'StudentDataTemplateTimelineView';
 	public _type = 'Student';
 
 	public onListen : function () {

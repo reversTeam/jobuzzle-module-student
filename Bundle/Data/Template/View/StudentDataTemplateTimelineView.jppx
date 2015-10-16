@@ -7,10 +7,10 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 15:56:42
 **************************************************************/
 
-class StudentUserDataTemplateTimelineView extends BaseUserDataTemplateTimelineView {
+class StudentDataTemplateTimelineView extends BaseUserDataTemplateTimelineView {
 
 
 }
