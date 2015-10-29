@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-09 14:17:00
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-29 11:36:02
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -27,15 +27,25 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 			picture = this.getUrlAsset(entity.getPicture());
 		style['backgroundImage'] = 'url("'+ picture +'")'; 
 		return <div className="student view">
-			<div className="actions">
-				<i className="fa fa-suitcase" data-url={router.entityRoute(entity, 'filter')} onClick={this.link}></i>
-				<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
+			<div className="container">
+				<div className="actions">
+					<i className="fa fa-suitcase" data-url={router.entityRoute(entity, 'studentfilter')} onClick={this.link}></i>
+					<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
+				</div>
+				<div className="picture" style={style}></div>
+				<div className="nameProfile">
+					{entity.getFirstname() +' '+ entity.getLastname()}
+				</div>
 			</div>
-			<div className="picture" style={style}></div>
-			<div className="nameProfile">
-				{entity.getFirstname() +' '+ entity.getLastname()}
+			<div className="more">
+				<div className="container skilllinks">
+					<h2 className="title">Skill</h2>
+					{ this.getHelper('DisplayStudentFilter', { entity : entity }) }
+				</div>
+				<div className="container challengelinks">
+					<h2 className="title">Project</h2>
+				</div>
 			</div>
-			{ this.getHelper('DisplayFilter', { entity : entity }) }
 		</div>;
 	}
 
