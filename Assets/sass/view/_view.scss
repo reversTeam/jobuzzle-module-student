@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-29 02:06:00
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-05 18:12:39
 **************************************************************/
 
 div.student.view {
@@ -16,7 +16,7 @@ div.student.view {
 		display: inline-block;
 		width: 160px;
 		height: 190px;
-		background-size : 100% 100%;
+		background-size : cover;
 		background-repeat: no-repeat;
 		background-color : rgba($primary_color, 0.8);
 	}
