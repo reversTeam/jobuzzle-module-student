@@ -7,30 +7,12 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-05 18:12:39
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:22:06
 **************************************************************/
 
 div.student.view {
-
-	div.picture {
-		display: inline-block;
-		width: 160px;
-		height: 190px;
-		background-size : cover;
-		background-repeat: no-repeat;
-		background-color : rgba($primary_color, 0.8);
-	}
-
-	div.nameProfile {
-		display: inline-block;
-		vertical-align: top;
-		margin-left : 20px;
-		color: $primary_color;
-		font-size: 26px;
-		font-weight: bold;
-	}
 	
-	div.more {
+	div.contents {
 		width: 100%;
 		clear: both;
 		padding: 0px;

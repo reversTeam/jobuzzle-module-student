@@ -7,7 +7,7 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-29 11:36:02
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:17:55
 **************************************************************/
 
 class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
@@ -15,36 +15,16 @@ class StudentDataTemplateViewView extends BaseUserDataTemplateViewView {
 	public _class = 'student';
 	public _elementType = 'Student';
 
-	public display : function () {
-		var router = serviceLocator.get('Router');
+	public displayContents : function (entity) {
 		var entity = this.state['entity'];
-		var picture = '';
-		var style = {};
 
-		if (!entity)
-			return (<div>Student not loaded</div>);
-		else if (entity.getPicture() != undefined)
-			picture = this.getUrlAsset(entity.getPicture());
-		style['backgroundImage'] = 'url("'+ picture +'")'; 
-		return <div className="student view">
-			<div className="container">
-				<div className="actions">
-					<i className="fa fa-suitcase" data-url={router.entityRoute(entity, 'studentfilter')} onClick={this.link}></i>
-					<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
-				</div>
-				<div className="picture" style={style}></div>
-				<div className="nameProfile">
-					{entity.getFirstname() +' '+ entity.getLastname()}
-				</div>
+		return <div className="contents">
+			<div className="skilllinks">
+				<h2 className="title">Skill</h2>
+				{ this.getHelper('DisplayStudentFilter', { entity : entity }) }
 			</div>
-			<div className="more">
-				<div className="container skilllinks">
-					<h2 className="title">Skill</h2>
-					{ this.getHelper('DisplayStudentFilter', { entity : entity }) }
-				</div>
-				<div className="container challengelinks">
-					<h2 className="title">Project</h2>
-				</div>
+			<div className="challengelinks">
+				<h2 className="title">Project</h2>
 			</div>
 		</div>;
 	}
