@@ -7,12 +7,20 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-06 11:53:54
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:18:47
 ###############################################################
 
-Students: 'Etudiants'
-view: '{{url}}'
-update: '{{url}}'
+page:
+	title:
+		Students: 'Etudiants'
+		view: '{{url}}'
+		update: '{{url}}'
 
 timeline:
 	student: Étudiant
+
+view:
+	skills: Compétences
+	challenges: Défis
+	actions:
+		edit: Editer l'étudiant
