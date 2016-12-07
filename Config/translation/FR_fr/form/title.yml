@@ -7,10 +7,11 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-20 12:19:47
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:07:36
 ###############################################################
 
 student:
 	create: 'Créer un étudiant'
 	edit : 'Editer un étudiant'
 	search : 'Rechercher des étudiants'
+	delete: Supprimer l'étudiant

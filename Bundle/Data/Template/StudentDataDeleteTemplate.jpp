@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-08-08 14:32:22
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 15:30:50
 **************************************************************/
 
 class StudentDataDeleteTemplate extends BaseUserDataDeleteTemplate {
 
-	_viewClassName = 'StudentDataTemplateDeleteView';
-	_type = 'Student';
-	_route = 'student';
+	public _viewClassName = 'StudentDataTemplateDeleteView';
+	public _type = 'Student';
+	public _serviceName = 'student_data_main_service';
 
 }

@@ -7,10 +7,16 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-06 11:54:34
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 13:05:45
 **************************************************************/
 
 class StudentDataTemplateTimelineView extends BaseUserDataTemplateTimelineView {
+
+	public getClassElement : function () {
+		var classElement = _super();
+		classElement.push('student');
+		return classElement;
+	}
 
 	public displayFooter : function () {
 		var t = serviceLocator.get('Translator');

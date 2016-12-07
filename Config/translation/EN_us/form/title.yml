@@ -7,10 +7,11 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-09-20 12:20:18
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:08:00
 ###############################################################
 
 student:
 	create: 'Create a student'
 	edit : 'Edit a student'
 	search : 'Search students'
+	delete: Delete student
